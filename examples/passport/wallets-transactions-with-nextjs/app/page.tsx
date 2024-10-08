@@ -1,21 +1,19 @@
 'use client';
-
-import { sendTransaction } from '@/src/transaction';
-import { passportInstance } from '@/src/utils';
+import { Button, Heading } from '@biom3/react';
+import NextLink from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-8">Passport Send Transaction Examples</h1>
-      <div className="grid grid-cols-1 gap-4 text-center">
-        <button
-          className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800"
-          onClick={() => sendTransaction(passportInstance)}
-          type="button"
-        >
-          Send Transaction
-        </button>
-      </div>
-    </div>
-  );
+  return (<>
+      <Heading 
+      size="medium" 
+      className="mb-1">
+        Passport Send Transaction Examples
+      </Heading>
+      <Button       
+      className="mb-1"
+      size="medium" 
+      rc={<NextLink href="/send-erc721-with-etherjs" />}>
+        Send ERC-721 with EtherJS
+      </Button> 
+  </>);
 }

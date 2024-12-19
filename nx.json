@@ -2,8 +2,12 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "d": {
-      "dependsOn": ["^d"],
-      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [
+        "^d"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "cache": true
     },
     "lint": {
@@ -11,12 +15,18 @@
     },
     "typecheck": {
       "cache": true,
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     },
     "test": {
       "cache": true,
-      "dependsOn": ["build"],
-      "outputs": ["{projectRoot}/coverage"],
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ],
       "configurations": {
         "ci": {
           "codeCoverage": true
@@ -24,19 +34,25 @@
       }
     },
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "cache": true
     },
     "export": {
       "dependsOn": [
         "build"
       ],
-      "outputs": ["{projectRoot}/out"],
+      "outputs": [
+        "{projectRoot}/out"
+      ],
       "cache": true
     }
   },
   "defaultBase": "main",
   "parallel": 8,
-  "nxCloudAccessToken": "Mzg3ZGY1MWUtYmYyNy00ZmE4LTkyNDAtYjYxZmJmYmE4NWQ3fHJlYWQ="
+  "nxCloudAccessToken": "YzBhOTcxNjktYjUyZi00M2I0LWI2N2MtZGJkZTkzMDZkYmIxfHJlYWQtd3JpdGU="
 }

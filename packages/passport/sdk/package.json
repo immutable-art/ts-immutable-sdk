@@ -72,6 +72,17 @@
     "dist"
   ],
   "homepage": "https://github.com/immutable/ts-immutable-sdk#readme",
+  "lavamoat": {
+    "allowScripts": {
+      "@ethersproject/providers>ws>bufferutil": false,
+      "@ethersproject/providers>ws>utf-8-validate": false,
+      "@imtbl/x-client>ethereumjs-wallet>ethereum-cryptography>keccak": false,
+      "@imtbl/x-client>ethereumjs-wallet>ethereum-cryptography>secp256k1": false,
+      "@magic-sdk/provider>web3-core>web3-core-requestmanager>web3-providers-ws>websocket>es5-ext": false,
+      "@swc/core": false,
+      "msw": false
+    }
+  },
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "private": true,
@@ -84,16 +95,5 @@
     "test:watch": "jest --watch",
     "typecheck": "tsc --customConditions default --noEmit --jsx preserve"
   },
-  "type": "module",
-  "lavamoat": {
-    "allowScripts": {
-      "@ethersproject/providers>ws>bufferutil": false,
-      "@ethersproject/providers>ws>utf-8-validate": false,
-      "@imtbl/x-client>ethereumjs-wallet>ethereum-cryptography>keccak": false,
-      "@imtbl/x-client>ethereumjs-wallet>ethereum-cryptography>secp256k1": false,
-      "@magic-sdk/provider>web3-core>web3-core-requestmanager>web3-providers-ws>websocket>es5-ext": false,
-      "@swc/core": false,
-      "msw": false
-    }
-  }
+  "type": "module"
 }
